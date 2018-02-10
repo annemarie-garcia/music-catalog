@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+        <h1>The Steenkamp's Music Catalog</h1>
+
+          <form action="{{ url_for('EditItem', category_id = category_id, item_id=item_id)}}" method="POST" name="editItem">
+
+                <p>Item Name:
+                    <input type="text" size="40" name="music-genre" value="{{item.item_name}}"/></p>
+
+                <p>Description:<textarea>{{item.description}}</textarea></p>
+
+                <p>Category: <select><option></option></select></p>
+
+                    <input type="submit" value="Edit">
+            </form>
+
+            <a href = "{{url_for('ReadItems') }}">Back to Catalog list</a>
+    </body>
+</html>

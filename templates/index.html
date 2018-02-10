@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <a href="/login">Login</a>
+        <h1>The Steenkamp's Music Catalog</h1>
+
+        <!--<p>There are no categories available.</p>-->
+
+        <h2>Categories</h2>
+
+        <ul>
+            {% for i in categories %}
+                <li><a href="/catalog/{{i.id}}/items/">{{i.name}}</a>
+                    <br />
+                    <a href="/catalog/{{i.id}}/edit/">Edit </a><br/>
+                    <a href="/catalog/{{i.id}}/delete/">Delete </a>
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
+        <p><a href='/catalog/category/new/'>Create a new category</a>
+        </p>
+
+
+
+    </body>
+</html>

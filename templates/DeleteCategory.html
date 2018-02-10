@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <h1>The Steenkamp's Music Catalog</h1>
+
+        <h2>Delete category {{item.name}}</h2>
+            <form action="{{ url_for('DeleteCategory', category_id = category_id)}}" method="POST" name="deleteCategory">
+
+                    <p> Are you sure you want to delete {{item.name}}? All items in this category will be lost.</p><br/>
+
+                    <input type="submit" value="Delete">
+            </form>
+    </body>
+</html>

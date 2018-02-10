@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <h1>The Steenkamp's Music Catalog</h1>
+
+        <h2>Add a new item to {{category.name}}</h2>
+
+            <form action="{{ url_for('NewItem', category_id = category_id)}}" method="POST">
+                <p>Artist:</p>
+                    <input type="text" size="40" name="music-artist" />
+                <p>Description:</p>
+                <textarea name="music-description"></textarea>
+                <br/>
+                <input type="submit" value="Add to Catalog">
+            </form>
+
+
+    </body>
+</html>
